@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{617D3B5E-F996-4F18-A94B-EE50F8268AF7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OpencvDlibTemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>HumanPose001</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\opencv\build\include;$(IncludePath);C:\Program Files\opencv\build\include\opencv;C:\Program Files\opencv\build\include\opencv2</IncludePath>
+    <LibraryPath>C:\Program Files\opencv\build\x86\vc12\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\opencv\build\include;$(IncludePath);C:\Program Files\opencv\build\include\opencv;C:\Program Files\opencv\build\include\opencv2;..\..\Libraries\Dlib\dlib-master;..\..\Libraries\Dlib\dlib-master\dlib\all;..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg;..\..\Libraries\Dlib\dlib-master\dlib\external\libpng;..\..\Libraries\Dlib\dlib-master\dlib\external\zlib</IncludePath>
+    <LibraryPath>..\..\Libraries\Dlib\dlib-master;C:\Program Files\opencv\build\x86\vc12\lib;..\..\Libraries\Dlib\dlib-master\dlib\external;D:\HumanPose\HumanPose001\glew-2.0.0\lib\Release\x64;D:\HumanPose\HumanPose001\glew-2.0.0\lib\Release\Win32;D:\HumanPose\HumanPose001\glfw-3.2\x86\lib-vc2015;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_calib3d2413.lib;opencv_calib3d2413d.lib;opencv_contrib2413.lib;opencv_contrib2413d.lib;opencv_core2413.lib;opencv_core2413d.lib;opencv_features2d2413.lib;opencv_features2d2413d.lib;opencv_flann2413.lib;opencv_flann2413d.lib;opencv_gpu2413.lib;opencv_gpu2413d.lib;opencv_highgui2413.lib;opencv_highgui2413d.lib;opencv_imgproc2413.lib;opencv_imgproc2413d.lib;opencv_legacy2413.lib;opencv_legacy2413d.lib;opencv_ml2413.lib;opencv_ml2413d.lib;opencv_nonfree2413.lib;opencv_nonfree2413d.lib;opencv_objdetect2413.lib;opencv_objdetect2413d.lib;opencv_ocl2413.lib;opencv_ocl2413d.lib;opencv_photo2413.lib;opencv_photo2413d.lib;opencv_stitching2413.lib;opencv_stitching2413d.lib;opencv_superres2413.lib;opencv_superres2413d.lib;opencv_ts2413.lib;opencv_ts2413d.lib;opencv_video2413.lib;opencv_video2413d.lib;opencv_videostab2413.lib;opencv_videostab2413d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;DLIB_PNG_SUPPORT;DLIB_JPEG_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_calib3d2413.lib;opencv_calib3d2413d.lib;opencv_contrib2413.lib;opencv_contrib2413d.lib;opencv_core2413.lib;opencv_core2413d.lib;opencv_features2d2413.lib;opencv_features2d2413d.lib;opencv_flann2413.lib;opencv_flann2413d.lib;opencv_gpu2413.lib;opencv_gpu2413d.lib;opencv_highgui2413.lib;opencv_highgui2413d.lib;opencv_imgproc2413.lib;opencv_imgproc2413d.lib;opencv_legacy2413.lib;opencv_legacy2413d.lib;opencv_ml2413.lib;opencv_ml2413d.lib;opencv_nonfree2413.lib;opencv_nonfree2413d.lib;opencv_objdetect2413.lib;opencv_objdetect2413d.lib;opencv_ocl2413.lib;opencv_ocl2413d.lib;opencv_photo2413.lib;opencv_photo2413d.lib;opencv_stitching2413.lib;opencv_stitching2413d.lib;opencv_superres2413.lib;opencv_superres2413d.lib;opencv_ts2413.lib;opencv_ts2413d.lib;opencv_video2413.lib;opencv_video2413d.lib;opencv_videostab2413.lib;opencv_videostab2413d.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\all\source.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcapimin.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcapistd.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jccoefct.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jccolor.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcdctmgr.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jchuff.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcinit.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcmainct.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcmarker.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcmaster.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcomapi.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcparam.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcphuff.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcprepct.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jcsample.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdapimin.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdapistd.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdatadst.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdatasrc.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdcoefct.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdcolor.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jddctmgr.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdhuff.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdinput.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdmainct.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdmarker.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdmaster.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdmerge.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdphuff.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdpostct.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdsample.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jerror.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jfdctflt.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jfdctfst.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jfdctint.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jidctflt.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jidctfst.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jidctint.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jidctred.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jmemmgr.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jmemnobs.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jquant1.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jquant2.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jutils.cpp" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\png.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngerror.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngget.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngmem.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngpread.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngread.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngrio.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngrtran.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngrutil.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngset.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngtrans.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngwio.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngwrite.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngwtran.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngwutil.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\adler32.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\compress.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\crc32.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\deflate.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\gzclose.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\gzlib.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\gzread.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\infback.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inffast.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inflate.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inftrees.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\trees.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\uncompr.c" />
+    <ClCompile Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\zutil.c" />
+    <ClCompile Include="DetectObject.cpp" />
+    <ClCompile Include="ElbowDetector.cpp" />
+    <ClCompile Include="HandDetector.cpp" />
+    <ClCompile Include="HeadDetector.cpp" />
+    <ClCompile Include="Human.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OpticalFlow_GPU.cpp" />
+    <ClCompile Include="PLKTracker.cpp" />
+    <ClCompile Include="Tracker.cpp" />
+    <ClCompile Include="TrackerGPU.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jchuff.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jconfig.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdct.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jdhuff.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jerror.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jinclude.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jmemsys.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jmorecfg.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jpegint.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jpeglib.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\jversion.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\png.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngconf.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngdebug.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pnginfo.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pnglibconf.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngpriv.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\pngstruct.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\crc32.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\deflate.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\gzguts.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inffast.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inffixed.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inflate.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\inftrees.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\trees.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\zconf.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\zlib.h" />
+    <ClInclude Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\zutil.h" />
+    <ClInclude Include="DetectObject.h" />
+    <ClInclude Include="ElbowDetector.h" />
+    <ClInclude Include="HandDetector.h" />
+    <ClInclude Include="HeadDetector.h" />
+    <ClInclude Include="Human.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="OpticalFlow_GPU.h" />
+    <ClInclude Include="PLKTracker.h" />
+    <ClInclude Include="Tracker.h" />
+    <ClInclude Include="TrackerGPU.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libjpeg\README" />
+    <None Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\LICENSE" />
+    <None Include="..\..\Libraries\Dlib\dlib-master\dlib\external\libpng\README" />
+    <None Include="..\..\Libraries\Dlib\dlib-master\dlib\external\zlib\README" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>..\glew-2.0.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\glew-2.0.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>..\glfw-3.2\x86\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\glfw-3.2\x86\lib-vc2015;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
